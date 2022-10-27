@@ -1,4 +1,6 @@
 import 'package:becalm/services/auth_service.dart';
+import 'package:becalm/view/my_account.page.dart';
+import 'package:becalm/view/play_list.page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -19,28 +21,30 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Padding(
-                padding: const EdgeInsets.symmetric(vertical: 24),
-                child: OutlinedButton(
-                  onPressed: () => context.read<AuthService>().logout(),
-                  style: OutlinedButton.styleFrom(
-                    foregroundColor: Colors.red,
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const PlayListPage(),
                   ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Padding(
-                        padding: EdgeInsets.all(16),
-                        child: Text(
-                          "Sair do App",
-                          style: TextStyle(fontSize: 18),
-                        ),
-                      )
-                    ],
+                );
+              },
+              child: const Text("Acessar Playlists"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const MyAccountPage(),
                   ),
-                ))
+                );
+              },
+              child: const Text("Minha conta"),
+            ),
           ],
         ),
       ),

@@ -1,4 +1,5 @@
 import 'package:becalm/services/auth_service.dart';
+import 'package:becalm/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -122,6 +123,14 @@ class _LoginPageState extends State<LoginPage> {
               Padding(
                 padding: const EdgeInsets.all(24),
                 child: ElevatedButton(
+                  style: ButtonStyle(
+                    foregroundColor: MaterialStateProperty.all<Color?>(
+                      MyColors.black,
+                    ),
+                    backgroundColor: MaterialStateProperty.all<Color?>(
+                      MyColors.green,
+                    ),
+                  ),
                   onPressed: () {
                     if (formKey.currentState!.validate()) {
                       if (isLogin) {
@@ -160,8 +169,17 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
               TextButton(
-                  onPressed: () => setFormAction(!isLogin),
-                  child: Text(toggleButton))
+                onPressed: () => setFormAction(!isLogin),
+                style: ButtonStyle(
+                  foregroundColor: MaterialStateProperty.all<Color?>(
+                    MyColors.black,
+                  ),
+                  backgroundColor: MaterialStateProperty.all<Color?>(
+                    MyColors.green,
+                  ),
+                ),
+                child: Text(toggleButton),
+              )
             ],
           ),
         ),

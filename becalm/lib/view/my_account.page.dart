@@ -1,4 +1,5 @@
 import 'package:becalm/services/auth_service.dart';
+import 'package:becalm/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -15,6 +16,8 @@ class _MyAccountPageState extends State<MyAccountPage> {
     AuthService auth = Provider.of<AuthService>(context);
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: MyColors.green,
+        foregroundColor: Colors.green.shade900,
         title: const Text("Minha conta"),
       ),
       body: SingleChildScrollView(

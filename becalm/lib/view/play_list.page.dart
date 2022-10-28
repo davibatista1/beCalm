@@ -1,5 +1,6 @@
 // ignore_for_file: deprecated_member_use
 
+import 'package:becalm/utils/colors.dart';
 import 'package:becalm/utils/key_values_names.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -16,6 +17,8 @@ class _PlayListPageState extends State<PlayListPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: MyColors.green,
+        foregroundColor: Colors.green.shade900,
         title: const Text("Playlist"),
       ),
       body: SingleChildScrollView(
@@ -90,7 +93,7 @@ class PlayListOptionWidget extends StatelessWidget {
             color: Colors.green,
           ),
           borderRadius: BorderRadius.circular(8),
-          color: Colors.green.shade100),
+          color: MyColors.green),
       child: GestureDetector(
         onTap: () async {
           await launch(url);

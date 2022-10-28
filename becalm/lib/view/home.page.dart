@@ -1,10 +1,10 @@
-import 'package:becalm/services/auth_service.dart';
+import 'package:becalm/utils/colors.dart';
+import 'package:becalm/widgets/menu.widget.dart';
+import 'package:becalm/widgets/phrase_day.widget.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key, required this.title});
-  final String title;
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -15,33 +15,29 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: ClipRRect(
+          borderRadius: const BorderRadius.all(Radius.circular(100)),
+          child: Image.asset(
+            "assets/logo_quiet.png",
+            width: 150,
+          ),
+        ),
+        backgroundColor: MyColors.green,
+        foregroundColor: Colors.green.shade900,
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: <Widget>[
-            Padding(
-                padding: const EdgeInsets.symmetric(vertical: 24),
-                child: OutlinedButton(
-                  onPressed: () => context.read<AuthService>().logout(),
-                  style: OutlinedButton.styleFrom(
-                    foregroundColor: Colors.red,
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Padding(
-                        padding: EdgeInsets.all(16),
-                        child: Text(
-                          "Sair do App",
-                          style: TextStyle(fontSize: 18),
-                        ),
-                      )
-                    ],
-                  ),
-                ))
-          ],
+      drawer: const DrawerMenu(),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(24.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(height: 12),
+              PhraseDay(),
+              const SizedBox(height: 48),
+            ],
+          ),
         ),
       ),
     );

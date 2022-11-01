@@ -1,4 +1,5 @@
 import 'package:becalm/utils/colors.dart';
+import 'package:becalm/utils/phrase_day.dart';
 import 'package:becalm/widgets/menu.widget.dart';
 import 'package:becalm/widgets/phrase_day.widget.dart';
 import 'package:flutter/material.dart';
@@ -34,8 +35,11 @@ class _HomePageState extends State<HomePage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 12),
-              PhraseDay(),
+              PhraseDay(
+                phrases: phrase,
+              ),
               const SizedBox(height: 48),
+              const Text("Objetivos"),
             ],
           ),
         ),

@@ -1,6 +1,7 @@
 import 'package:becalm/utils/colors.dart';
 import 'package:becalm/utils/phrase_day.dart';
 import 'package:becalm/widgets/menu.widget.dart';
+import 'package:becalm/widgets/objective.widget.dart';
 import 'package:becalm/widgets/phrase_day.widget.dart';
 import 'package:flutter/material.dart';
 
@@ -12,6 +13,10 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  bool selected1 = false;
+  bool selected2 = false;
+  bool selected3 = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,6 +45,49 @@ class _HomePageState extends State<HomePage> {
               ),
               const SizedBox(height: 48),
               const Text("Objetivos"),
+              const SizedBox(height: 12),
+              GestureDetector(
+                onTap: () {
+                  setState(() {
+                    selected1 = true;
+                  });
+                },
+                child: ObjectiveWidget(
+                  isSelected: selected1,
+                  icon: const Icon(Icons.water_drop),
+                  description: "Beber 3 copos de água",
+                  color: Colors.blue.shade100,
+                ),
+              ),
+              const SizedBox(height: 24),
+              GestureDetector(
+                onTap: () {
+                  setState(() {
+                    selected2 = true;
+                  });
+                },
+                child: ObjectiveWidget(
+                  isSelected: selected2,
+                  icon: const Icon(Icons.menu_book),
+                  description: "Ler 3 páginas de um livro",
+                  color: Colors.yellow.shade100,
+                ),
+              ),
+              const SizedBox(height: 24),
+              GestureDetector(
+                onTap: () {
+                  setState(() {
+                    selected3 = true;
+                  });
+                },
+                child: ObjectiveWidget(
+                  isSelected: selected3,
+                  icon: const Icon(Icons.run_circle),
+                  description: "Praticar 15 minutos de exercícios",
+                  color: MyColors.green,
+                ),
+              ),
+              const SizedBox(height: 12),
             ],
           ),
         ),

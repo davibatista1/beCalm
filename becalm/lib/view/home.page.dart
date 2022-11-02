@@ -44,7 +44,12 @@ class _HomePageState extends State<HomePage> {
                 phrases: phrase,
               ),
               const SizedBox(height: 48),
-              const Text("Objetivos"),
+              Center(
+                child: Text(
+                  "Objetivos",
+                  style: TextStyle(color: Colors.green.shade900),
+                ),
+              ),
               const SizedBox(height: 12),
               GestureDetector(
                 onTap: () {
@@ -87,6 +92,13 @@ class _HomePageState extends State<HomePage> {
                   color: MyColors.green,
                 ),
               ),
+              const SizedBox(height: 24),
+              if (selected1 == true && selected2 == true && selected3 == true)
+                Text(
+                  "PARABÉNS!\nObejtivos diários concluídos, volte amanhã para novos objetivos",
+                  style: TextStyle(color: Colors.green.shade900),
+                  textAlign: TextAlign.center,
+                ),
               const SizedBox(height: 12),
             ],
           ),

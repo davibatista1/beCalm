@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "662489863977",
+    "project_id": "quiet-app-1f6f7",
+    "storage_bucket": "quiet-app-1f6f7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:662489863977:android:7210eb98dbb6d220408938",
+        "android_client_info": {
+          "package_name": "com.quiet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "662489863977-5ljl7s2ekfs4p3afbu8mq2r950nf5t32.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyLrFcapCg1vocEYQz3hwyK5dxwGoUCFw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "662489863977-5ljl7s2ekfs4p3afbu8mq2r950nf5t32.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "662489863977-k0q9tlngpkadcph94274abukqr7v8v0o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.quiet"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

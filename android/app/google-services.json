@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:662489863977:android:7210eb98dbb6d220408938",
         "android_client_info": {
-          "package_name": "com.example.becalm"
+          "package_name": "com.quiet"
         }
       },
       "oauth_client": [
@@ -34,7 +34,7 @@
               "client_id": "662489863977-k0q9tlngpkadcph94274abukqr7v8v0o.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.example.becalm"
+                "bundle_id": "com.quiet"
               }
             }
           ]

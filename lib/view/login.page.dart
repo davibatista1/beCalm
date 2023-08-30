@@ -58,7 +58,7 @@ class _LoginPageState extends State<LoginPage> {
     setState(() => loading = true);
     try {
       await context.read<AuthService>().registrar(email.text, senha.text);
-    } on AuthException catch (e) {
+    } on AuthException catch (e){
       setState(() => loading = false);
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text(e.message)),

@@ -21,13 +21,13 @@ class _PlayListPageState extends State<PlayListPage> {
         foregroundColor: Colors.green.shade900,
         title: const Text("Playlist"),
       ),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(24.0),
+          padding: EdgeInsets.all(24.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
+            children: [
               Text(
                 "Escolha a Playlist que deseja ouvir:",
                 style: TextStyle(fontSize: 18),
